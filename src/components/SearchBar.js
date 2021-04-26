@@ -1,20 +1,26 @@
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet, TextInput} from "react-native";
 import {Feather} from '@expo/vector-icons'
 
 const SearchBar = () => {
-    return <View style={styles.background}>
+    return <View style={styles.backgroundStyle}>
         <Feather name="search" size={30}/>
-        <Text>Search Bar</Text>
+        <TextInput placeholder="search" style={styles.inputStyle} />
     </View>
 }
 
 const styles = StyleSheet.create({
-    background: {
+    backgroundStyle: {
         backgroundColor: '#e7e7e7',
         height: 50,
         borderRadius: 5,
-        marginHorizontal: 15
+        marginHorizontal: 15,
+        flexDirection: 'row'
+    },
+    inputStyle: {
+        borderColor: 'black',
+        borderWidth: 1,
+        flex: 1
     }
 })
 
